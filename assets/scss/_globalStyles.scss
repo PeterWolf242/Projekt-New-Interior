@@ -1,0 +1,51 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: NixieOne, serif;
+    font-size: clamp(60px, 5vw, 70px);
+    font-weight: 400;
+    line-height: 56px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+h2 {
+    font-size: clamp(20px, 5vw, 22px);
+}
+
+h3 {
+    font-family: AlegreyaSans, serif;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 75%;
+}
+
+//* p-tag
+.text_content {
+    font-family: HelveticaNeue, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    @include btn;
+}
+
+button {
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+}

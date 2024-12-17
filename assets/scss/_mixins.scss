@@ -1,0 +1,96 @@
+@mixin flexCenter {
+    width: $w100;
+    height: $h100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin full {
+    width: 100%;
+    height: 100vh;
+}
+
+@mixin layout {
+    padding: $generalPadding;
+}
+
+@mixin flex-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+}
+
+@mixin full-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@mixin layout-p-t-l {
+    padding: 3rem 6rem;
+}
+
+@mixin layout-p-t-l-tablet {
+    padding: 2.6rem 10px 3rem 10px;
+}
+
+@mixin layout-p-t-l-mobile {
+    padding: 53px 10px;
+}
+
+@mixin imgSize($width, $heigth) {
+    width: $width;
+    height: $heigth;
+    object-fit: cover;
+}
+
+@mixin btn {
+    background-color: transparent;
+    border: 1px solid $black;
+    padding: $p-12-17;
+   
+    a {
+        font-family: Helvetica, sans-serif;
+        font-size: 18px;
+        color: $black;
+    }
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}
+
+@mixin flexBetween {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexAround {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+    }
+}
+
+@mixin flexEvenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    // @media screen and (max-width: 992px) {
+    //     flex-direction: column;
+    // }
+}

@@ -1,0 +1,233 @@
+@font-face {
+  font-family: AlegreyaSans;
+  src: url("../fonts/AlegreyaSans.ttf");
+}
+@font-face {
+  font-family: NixieOne;
+  src: url(../fonts/NixieOne.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: NixieOne, serif;
+  font-size: clamp(60px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 56px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(20px, 5vw, 22px);
+}
+
+h3 {
+  font-family: AlegreyaSans, serif;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 75%;
+}
+
+.text_content {
+  font-family: HelveticaNeue, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #F1F0F0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  border: 1px solid #000000;
+  padding: 12px 17px;
+}
+.btn a {
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+.btn:hover {
+  background-color: #000000;
+  color: #F1F0F0;
+}
+
+button {
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  background: url("../img/headerbg.jpg") no-repeat top center;
+  background-size: cover;
+  height: calc(100vh + 200px);
+  position: relative;
+}
+header .logo_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px 0 30px;
+}
+header .logo_button p {
+  color: #F1F0F0;
+  font-family: AlegreyaSans, serif;
+  font-size: clamp(36px, 5vw, 38px);
+  text-align: center;
+}
+header .logo_button img {
+  cursor: pointer;
+}
+header .header_inlay {
+  width: 100%;
+  height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .header_inlay h1 {
+  color: #F1F0F0;
+  font-weight: 400;
+  line-height: 56px;
+}
+header .header_inlay h2 {
+  font-family: NixieOne, sans-serif;
+  color: #F1F0F0;
+  font-weight: 400;
+  text-align: center;
+}
+
+main .s-col-3 {
+  padding: 3rem 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  position: relative;
+}
+@media screen and (max-width: 992px) {
+  main .s-col-3 {
+    padding: 2.6rem 10px 3rem 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .s-col-3 {
+    padding: 53px 10px;
+  }
+}
+main .s-col-3 article {
+  margin-right: auto;
+}
+main h3, main p {
+  margin-right: auto;
+}
+main .btn {
+  position: absolute;
+  top: 3rem;
+  right: 6rem;
+}
+@media screen and (max-width: 992px) {
+  main .btn {
+    top: 2.6rem;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .btn {
+    top: 53px;
+    right: 10px;
+  }
+}
+main .col {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+}
+main .col .img_box {
+  width: 550px;
+  height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+main .col .img_box:hover img {
+  transform: scale(1.1);
+}
+main .col .img_box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.4s all ease-in-out;
+}
+main .col .img_box:hover .overlay {
+  opacity: 1;
+}
+main .col .img_box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: rgba(76, 100, 79, 0.35);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: 0.4s all ease-in-out;
+}
+main .col .img_box .overlay .btn_rocks {
+  background-color: #F1F0F0;
+  color: #000000;
+  padding: 12px 17px;
+  border: none;
+}
+main .full_view {
+  width: 100%;
+  height: 100%;
+  padding: 20%;
+  background: url("../img/section2-bg.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+main .full_view .overlay_service {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  color: #F1F0F0;
+  padding: 20px 0;
+}
+main .full_view .overlay_service h3 {
+  font-family: AlegreyaSans, serif;
+  font-size: clamp(36px, 5vw, 38px);
+  margin-bottom: 16px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,169 @@
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "globalStyles";
+
+header {
+    width: 100%;
+    background: url("../img/headerbg.jpg") no-repeat top center;
+    background-size: cover;
+    height: calc($v-h-100 + 200px);
+    position: relative;
+
+    .logo_button {
+        @include flexBetween;
+        padding: 25px 30px 0 30px;
+
+        p {
+            color: $white;
+            font-family: AlegreyaSans, serif;
+            font-size: clamp(36px, 5vw, 38px);
+            text-align: center;
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .header_inlay {
+        @include full;
+        @include flexCenter;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+            color: $white;
+            font-weight: 400;
+            line-height: 56px;
+        }
+
+        h2 {
+            font-family: NixieOne, sans-serif;
+            color: $white;
+            font-weight: $f-w-400;
+            text-align: center
+        }
+    }
+}
+
+main {
+    .s-col-3 {
+        @include layout-p-t-l;
+        @include flex-pic;
+        position: relative;
+
+        @media screen and (max-width: 992px) {
+            @include layout-p-t-l-tablet;
+        }
+
+        @media screen and (max-width: 768px) {
+            @include layout-p-t-l-mobile;
+        }
+
+        article {
+            margin-right: auto;
+        }
+    }
+
+    h3, p {
+        margin-right: auto;
+    }
+
+    .btn {
+        position: absolute;
+        top: 3rem;
+        right: 6rem;
+
+        @media screen and (max-width: 992px) {
+            top: 2.6rem;
+            right: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            top: 53px;
+            right: 10px;
+        }
+    }
+
+    .col {
+        @include flexEvenly;
+        width: $w100;
+        margin: 0 auto;
+
+        .img_box {
+            width: 550px;
+            height: 400px;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            
+            &:hover img {
+                transform: scale(1.1);
+            }
+            
+            img {
+                @include full-img;
+                transition: 0.4s all ease-in-out;
+            }
+
+            &:hover .overlay {
+                opacity: 1;
+            }
+            
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                background-color: $overlay-bg;
+                width: $w100;
+                height: $h100;
+                display: grid;
+                place-items: center;
+                opacity: 0;
+                transition: 0.4s all ease-in-out;
+
+                .btn_rocks {
+                    background-color: $white;
+                    color: $black;
+                    padding: $p-12-17;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .full_view {
+        width: $w100;
+        height: 100%;
+        padding: 20%;
+        background: url("../img/section2-bg.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;      
+        
+        .overlay_service {
+            width: $w100;
+            background-color: $over-bg-xl;
+            text-align: center;
+            color: $white;
+            padding: 20px 0;
+
+            h3 {
+                font-family: AlegreyaSans, serif;
+                font-size: clamp(36px, 5vw, 38px);
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+}
+
+
+
